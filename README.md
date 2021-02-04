@@ -72,11 +72,21 @@
 ![image](https://user-images.githubusercontent.com/5582138/106930631-1ced5c00-6759-11eb-8a2e-928fbe706c03.png)
 
 # 5. Gateway
+
+gateway > application.yml
+
 <img src="https://user-images.githubusercontent.com/5582138/106964379-59cf4800-6785-11eb-93c3-1b325a2c3ecd.png"  width="600" height="400">
 <img src="https://user-images.githubusercontent.com/5582138/106964228-21c80500-6785-11eb-8fb5-14d38de48874.png"  width="600" height="400">
 
+``
+    http POST http://localhost:8081/ticketings teamcode=AA betcredit=100
+``
 
 <img src="https://user-images.githubusercontent.com/5582138/106968915-28f31100-678d-11eb-8f7c-c421aa28bae5.png"  width="600" height="400">
+
+``
+    http http://localhost:8083/mytickets
+``
 <img src="https://user-images.githubusercontent.com/5582138/106968918-2a243e00-678d-11eb-8e4a-b91a31959ceb.png"  width="600" height="400">
 
 
