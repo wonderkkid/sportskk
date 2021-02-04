@@ -75,6 +75,14 @@
 
 gateway > application.yml
 
+``
+
+   ticketing    : 8081
+   tickettotal  : 8082
+   ticketcenter : 8083
+
+``
+
 <img src="https://user-images.githubusercontent.com/5582138/106964379-59cf4800-6785-11eb-93c3-1b325a2c3ecd.png"  width="600" height="400">
 <img src="https://user-images.githubusercontent.com/5582138/106964228-21c80500-6785-11eb-8fb5-14d38de48874.png"  width="600" height="400">
 
@@ -87,6 +95,7 @@ gateway > application.yml
 ``
     http http://localhost:8083/mytickets
 ``
+
 <img src="https://user-images.githubusercontent.com/5582138/106968918-2a243e00-678d-11eb-8e4a-b91a31959ceb.png"  width="600" height="400">
 
 
