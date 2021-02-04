@@ -1,0 +1,66 @@
+server:
+  port: 8088
+
+---
+
+spring:
+  profiles: default
+  cloud:
+    gateway:
+      routes:
+        - id: ticketing
+          uri: http://localhost:8081
+          predicates:
+            - Path=/ticketings/** 
+        - id: tickettotal
+          uri: http://localhost:8082
+          predicates:
+            - Path=/ticketTotals/**,/ticketTotalCancellations/** 
+        - id: ticketcenter
+          uri: http://localhost:8083
+          predicates:
+            - Path= /mytickets/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+
+---
+
+spring:
+  profiles: docker
+  cloud:
+    gateway:
+      routes:
+        - id: ticketing
+          uri: http://ticketing:8080
+          predicates:
+            - Path=/ticketings/** 
+        - id: tickettotal
+          uri: http://tickettotal:8080
+          predicates:
+            - Path=/ticketTotals/**,/ticketTotalCancellations/** 
+        - id: ticketcenter
+          uri: http://ticketcenter:8080
+          predicates:
+            - Path= /mytickets/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+server:
+  port: 8080
