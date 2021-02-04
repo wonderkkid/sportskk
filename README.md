@@ -1,6 +1,6 @@
 # SportskK : 스포츠KK - 스포츠 로터리 판매/집계 시스템
 
-![logo](https://user-images.githubusercontent.com/5582138/106925754-bca7eb80-6753-11eb-9361-7d99c3c60323.png)
+![logo](https://user-images.githubusercontent.com/5582138/106925754-bca7eb80-6753-11eb-9361-7d99c3c60323.png){: width="50%" height="500%"}
 
 
 # Table of contents
