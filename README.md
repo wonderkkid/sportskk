@@ -71,21 +71,27 @@
 # 이벤트 도출
 ![image](https://user-images.githubusercontent.com/5582138/106930631-1ced5c00-6759-11eb-8a2e-928fbe706c03.png)
 
+# 5. Gateway
+
+<img src="https://user-images.githubusercontent.com/5582138/106964185-1379e900-6785-11eb-8ced-7348b55c180d.png"  width="600" height="400">
+<img src="https://user-images.githubusercontent.com/5582138/106964228-21c80500-6785-11eb-8fb5-14d38de48874.png"  width="600" height="400">
+
+
 # 11. Polyglot Persistence
 
 마이크로서비스는 각자의 DB를 가지고 있고, 다른 서비스의 DB 에 접근할 수 없음. 제공된 API 를 통해서만 접근이 가능함. 
 각 서비스의 기능에 따라 적합한 데이터베이스를 선택해서 사용.
 
-ticketCenter 의 pom.xml 설정 : H2 DB
+> ticketCenter 의 pom.xml 설정 : H2 DB
 
-<img src="https://user-images.githubusercontent.com/5582138/106962285-3eaf0900-6782-11eb-9317-ac36169239bc.png"  width="200" height="200">
+<img src="https://user-images.githubusercontent.com/5582138/106962285-3eaf0900-6782-11eb-9317-ac36169239bc.png"  width="400" height="200">
 
-ticketing 의 pom.xml 설정 : HSQLDB
+> ticketing 의 pom.xml 설정 : HSQLDB
 
-<img src="https://user-images.githubusercontent.com/5582138/106962291-3f479f80-6782-11eb-8103-a3abbdeaf79c.png"  width="200" height="200">
+<img src="https://user-images.githubusercontent.com/5582138/106962291-3f479f80-6782-11eb-8103-a3abbdeaf79c.png"  width="400" height="200">
 
-tickettotal 의 pom.xml 설정 : MySQLDB
+> tickettotal 의 pom.xml 설정 : MySQLDB
 
-<img src="https://user-images.githubusercontent.com/5582138/106962930-2be90400-6783-11eb-8d79-2897f6c38a39.png"  width="200" height="200">
+<img src="https://user-images.githubusercontent.com/5582138/106962930-2be90400-6783-11eb-8d79-2897f6c38a39.png"  width="400" height="200">
 
 
