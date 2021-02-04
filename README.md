@@ -1,4 +1,4 @@
-# S portsk K : 스포츠KK - 스포츠 로터리 판매/집계 시스템
+# S portsk K : 스포츠KK [스포츠 크크] - 스포츠 로터리 판매/집계 시스템
 
 <img src="https://user-images.githubusercontent.com/5582138/106925754-bca7eb80-6753-11eb-9361-7d99c3c60323.png" width="200" height="200">
 
