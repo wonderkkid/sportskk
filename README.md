@@ -70,3 +70,9 @@
 
 # 이벤트 도출
 ![image](https://user-images.githubusercontent.com/5582138/106930631-1ced5c00-6759-11eb-8a2e-928fbe706c03.png)
+
+11. Polyglot Persistence
+마이크로서비스는 각자의 DB를 가지고 있고, 다른 서비스의 DB 에 접근할 수 없음. 제공된 API 를 통해서만 접근이 가능함. 
+각 서비스의 기능에 따라 적합한 데이터베이스를 선택해서 사용.
+
+
