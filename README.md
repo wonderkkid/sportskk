@@ -72,8 +72,7 @@
 ![image](https://user-images.githubusercontent.com/5582138/106930631-1ced5c00-6759-11eb-8a2e-928fbe706c03.png)
 
 # 5. Gateway
-
-<img src="https://user-images.githubusercontent.com/5582138/106964185-1379e900-6785-11eb-8ced-7348b55c180d.png"  width="600" height="400">
+<img src="https://user-images.githubusercontent.com/5582138/106964379-59cf4800-6785-11eb-93c3-1b325a2c3ecd.png"  width="600" height="400">
 <img src="https://user-images.githubusercontent.com/5582138/106964228-21c80500-6785-11eb-8fb5-14d38de48874.png"  width="600" height="400">
 
 
