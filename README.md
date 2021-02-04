@@ -63,7 +63,7 @@
 1. Self-healing (Liveness Probe)
 
 
-# Event Storming
+# 1. Saga Pattern - Event Storming
 * 이벤트 스토밍 모델링 결과 (by MSAEZ) : http://www.msaez.io/#/storming/null/local/5ef4c7f90e266d3608ccbd45db9c52a7
 
 ![image](https://user-images.githubusercontent.com/5582138/106929039-3a212b00-6757-11eb-9c17-e80bbe3d1e9b.png)
@@ -75,26 +75,26 @@
 
 gateway > application.yml
 
-``
+````
 
    ticketing    : 8081
    tickettotal  : 8082
    ticketcenter : 8083
 
-``
+````
 
 <img src="https://user-images.githubusercontent.com/5582138/106964379-59cf4800-6785-11eb-93c3-1b325a2c3ecd.png"  width="600" height="400">
 <img src="https://user-images.githubusercontent.com/5582138/106964228-21c80500-6785-11eb-8fb5-14d38de48874.png"  width="600" height="400">
 
-``
+````
     http POST http://localhost:8081/ticketings teamcode=AA betcredit=100
-``
+````
 
 <img src="https://user-images.githubusercontent.com/5582138/106968915-28f31100-678d-11eb-8f7c-c421aa28bae5.png"  width="600" height="400">
 
-``
+````
     http http://localhost:8083/mytickets
-``
+````
 
 <img src="https://user-images.githubusercontent.com/5582138/106968918-2a243e00-678d-11eb-8e4a-b91a31959ceb.png"  width="600" height="400">
 
