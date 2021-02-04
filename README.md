@@ -76,6 +76,10 @@
 <img src="https://user-images.githubusercontent.com/5582138/106964228-21c80500-6785-11eb-8fb5-14d38de48874.png"  width="600" height="400">
 
 
+<img src="https://user-images.githubusercontent.com/5582138/106968915-28f31100-678d-11eb-8f7c-c421aa28bae5.png"  width="600" height="400">
+<img src="https://user-images.githubusercontent.com/5582138/106968918-2a243e00-678d-11eb-8e4a-b91a31959ceb.png"  width="600" height="400">
+
+
 # 11. Polyglot Persistence
 
 마이크로서비스는 각자의 DB를 가지고 있고, 다른 서비스의 DB 에 접근할 수 없음. 제공된 API 를 통해서만 접근이 가능함. 
