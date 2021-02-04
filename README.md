@@ -61,3 +61,7 @@
 1. Config Map/ Persistence Volume
 1. Polyglot
 1. Self-healing (Liveness Probe)
+
+
+# Event Storming
+* 이벤트 스토밍 모델링 결과 (by MSAEZ) : http://www.msaez.io/#/storming/null/local/5ef4c7f90e266d3608ccbd45db9c52a7
