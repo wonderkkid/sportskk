@@ -105,18 +105,13 @@ Transfer-Encoding: chunked
 }
 
 ````
+<img src="https://user-images.githubusercontent.com/5582138/107000493-5199fb80-67cb-11eb-8796-2d4bc23688a8.png"  width="600" height="400">
 
-- 구매한 티켓의 상태가 betting으로 변경되었는지 확인 (pub/sub)
-http localhost:8081/items/1 
-image
+- 구매 티켓 조회
 
-- 티켓 취소
-http DELETE localhost:8081/ticketing/ teamcode=KT betcredit=10000 ticketstatus=none
-image
+<img src="https://user-images.githubusercontent.com/5582138/107000717-b0f80b80-67cb-11eb-97fa-b3e30169a670.png"  width="600" height="400">
 
-- 티켓 취소 확인
-http POST localhost:8081/ticketing/ teamcode=KT betcredit=10000 ticketstatus=none
-image
+<img src="https://user-images.githubusercontent.com/5582138/107000577-71c9ba80-67cb-11eb-9dbb-a9b0db0a9dc2.png"  width="600" height="400">
 
 CQRS - view를 통해 티켓의 구매와 상태 변화, 집계 여부를 한번에 확인 가능함
 
