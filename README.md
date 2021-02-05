@@ -109,11 +109,13 @@ gateway > application.yml
 # 6. Deploy
 
 ****** 네임스페이스 만들기
+
 kubectl create ns sportskk
 kubectl get ns
 kubectl create ns kubectl get sportskk
 
 ****** 폴더 만들기, 해당폴더로 이동
+
 mkdir sportskk
 cd sportskk
 mkdir sportskk
@@ -124,6 +126,7 @@ git clone https://github.com/wonderkkid/sportskk.git
 캡처1 git clone
 
 ****** 빌드하기
+
 cd ticketing
 mvn package -Dmaven.test.skip=true
 
@@ -136,11 +139,13 @@ az acr build --registry skccuser12 --image skccuser12.azurecr.io/gateway:0.1 .
 캡처3 az acr build
 
 ****** 컨테이너라이징: 디플로이 생성 확인
+
 kubectl create deploy gateway --image=skccuser12.azurecr.io/gateway:0.1  -n sportskk
 
 캡처7 create deploy
 
 ****** 컨테이너라이징: 서비스 생성 확인
+
 kubectl expose deploy gateway --type=LoadBalancer --port=8080 -n sportskk
 
 캡처8 expose
