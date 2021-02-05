@@ -76,6 +76,51 @@
 # 이벤트 도출
 ![image](https://user-images.githubusercontent.com/5582138/106930631-1ced5c00-6759-11eb-8a2e-928fbe706c03.png)
 
+
+# 2. CQRS 포함 시나리오 구현 검증
+
+# 티켓 구매
+http POST localhost:8081/ticketing/ teamcode=KT betcredit=10000 ticketstatus=none
+
+````
+G:\>http POST  http://localhost:8081/ticketings teamcode=KT betcredit=1000000
+HTTP/1.1 201
+Content-Type: application/json;charset=UTF-8
+Date: Fri, 05 Feb 2021 03:11:46 GMT
+Location: http://localhost:8081/ticketings/1
+Transfer-Encoding: chunked
+
+{
+    "_links": {
+        "self": {
+            "href": "http://localhost:8081/ticketings/1"
+        },
+        "ticketing": {
+            "href": "http://localhost:8081/ticketings/1"
+        }
+    },
+    "betCredit": 1000000,
+    "teamCode": KT,
+    "ticketStatus": bet
+}
+
+````
+
+# 구매한 티켓의 상태가 betting으로 변경되었는지 확인 (pub/sub)
+http localhost:8081/items/1 
+image
+
+# 티켓 취소
+http DELETE localhost:8081/ticketing/ teamcode=KT betcredit=10000 ticketstatus=none
+image
+
+# 티켓 취소 확인
+http POST localhost:8081/ticketing/ teamcode=KT betcredit=10000 ticketstatus=none
+image
+
+CQRS - view를 통해 티켓의 구매와 상태 변화, 집계 여부를 한번에 확인 가능함
+
+
 # 5. Gateway
 
 gateway > application.yml
