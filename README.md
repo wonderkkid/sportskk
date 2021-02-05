@@ -222,19 +222,19 @@ ticketing, ticketcenter, tickettotal 에도 반복 적용
 
 * default쪽
 
-![image](./img/config1.png)
+<img src="https://user-images.githubusercontent.com/5582138/106987614-3621f700-67b1-11eb-8e5e-504f3652e913.png"  width="400" height="200">
 
 * docker 쪽
 
-![image](./img/config2.png)
+<img src="https://user-images.githubusercontent.com/5582138/106987632-4043f580-67b1-11eb-8b1e-7950b7e4dd0d.png"  width="400" height="200">
 
 - Deployment.yml 설정
 
-![image](./img/config3.png)
+<img src="https://user-images.githubusercontent.com/5582138/106987661-4f2aa800-67b1-11eb-96ec-01ce0ef6eb0c.png"  width="400" height="200">
 
 - config map 생성 후 조회
 ```
-kubectl create configmap apiurl --from-literal=url=http://payment:8080
+kubectl create configmap apiurl --from-literal=url=http://localhost:8080
 kubectl get configmap apiurl -o yaml
 ```
 
