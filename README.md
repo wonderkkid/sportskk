@@ -205,6 +205,16 @@ ticketing, ticketcenter, tickettotal 에도 반복 적용
 
 # 7. Circuit Breaker
 
+
+CirCuit Breaker Framework : Spring FeignClient + Hystrix 사용
+Reservation -> Payment 와의 Req/Res 연결에서 요청이 과도한 경우 CirCuit Breaker 통한 격리
+Hystrix 설정: 요청처리 쓰레드에서 처리시간이 600 밀리가 초과할 경우 CirCuit Breaker Closing 설정
+
+
+
+<img src="https://user-images.githubusercontent.com/5582138/107007349-be19f800-67d5-11eb-8784-347c5b549252.png"  width="400" height="200">
+
+
 # 8. Autoscale(HPA)
 
 ticketing 시스템에 대한 replica 를 동적으로 늘려주도록 HPA 를 설정한다. 설정은 CPU 사용량이 15프로를 넘어서면 replica 를 10개까지 늘려준다:
