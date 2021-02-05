@@ -132,26 +132,21 @@ mvn package -Dmaven.test.skip=true
 
 <img src="https://user-images.githubusercontent.com/5582138/106985154-41beef00-67ac-11eb-80d3-3004aa462b2e.png"  width="400" height="200">
 
-캡처2 mvn package
+mvn package
 
 ****** 도커라이징: Azure 레지스트리에 도커 이미지 푸시하기
 
 az acr build --registry skccuser12 --image skccuser12.azurecr.io/gateway:0.1 .
 
-캡처3 az acr build
+<img src="https://user-images.githubusercontent.com/5582138/106985268-7af75f00-67ac-11eb-9b57-d07b169a62e2.png"  width="400" height="200">
 
 ****** 컨테이너라이징: 디플로이 생성 확인
 
 kubectl create deploy gateway --image=skccuser12.azurecr.io/gateway:0.1  -n sportskk
 
-캡처7 create deploy
-
 ****** 컨테이너라이징: 서비스 생성 확인
 
 kubectl expose deploy gateway --type=LoadBalancer --port=8080 -n sportskk
-
-캡처8 expose
-
 
 ticketing, ticketcenter, tickettotal 에도 반복 적용
 
