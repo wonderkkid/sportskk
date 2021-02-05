@@ -79,7 +79,7 @@
 
 # 2. CQRS 포함 시나리오 구현 검증
 
-# 티켓 구매
+- 티켓 구매
 http POST localhost:8081/ticketing/ teamcode=KT betcredit=10000 ticketstatus=none
 
 ````
@@ -106,15 +106,15 @@ Transfer-Encoding: chunked
 
 ````
 
-# 구매한 티켓의 상태가 betting으로 변경되었는지 확인 (pub/sub)
+- 구매한 티켓의 상태가 betting으로 변경되었는지 확인 (pub/sub)
 http localhost:8081/items/1 
 image
 
-# 티켓 취소
+- 티켓 취소
 http DELETE localhost:8081/ticketing/ teamcode=KT betcredit=10000 ticketstatus=none
 image
 
-# 티켓 취소 확인
+- 티켓 취소 확인
 http POST localhost:8081/ticketing/ teamcode=KT betcredit=10000 ticketstatus=none
 image
 
