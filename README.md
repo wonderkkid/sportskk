@@ -130,6 +130,8 @@ git clone https://github.com/wonderkkid/sportskk.git
 cd ticketing
 mvn package -Dmaven.test.skip=true
 
+<img src="https://user-images.githubusercontent.com/5582138/106985154-41beef00-67ac-11eb-80d3-3004aa462b2e.png"  width="400" height="200">
+
 캡처2 mvn package
 
 ****** 도커라이징: Azure 레지스트리에 도커 이미지 푸시하기
