@@ -218,23 +218,30 @@ reservation > deployment.yml 설정
 
 <img src="https://user-images.githubusercontent.com/5582138/106990526-c3684a00-67b7-11eb-990f-c37136ad657a.png"  width="400" height="200">
 
-```` 
-  kubectl autoscale deploy reservation --min=1 --max=10 --cpu-percent=15 
-````
 
+<img src="https://user-images.githubusercontent.com/5582138/106991143-fe1eb200-67b8-11eb-86c7-61f5448f941e.png" >
+
+
+
+
+````
+   kubectl exec -it pod/siege-5c7c46b788-4rn4r -c siege -- /bin/bash
+````
+   
 워크로드를 50초 걸어준다.
-
+   
 ````
-kubectl exec -it pod/siege-5c7c46b788-4rn4r -c siege -- /bin/bash
+   siege -c250 -t50S -r1000 -v --content-type "application/json" 'http://localhost:8080/ticketings POST { "teamcode":KT, "betcredit":1000}'
 ````
-	
-siege -c250 -t50S -r1000 -v --content-type "application/json" 'http://localhost:8080/ticketings POST { "teamcode":KT, "betcredit":1000}'
 
+<img src="https://user-images.githubusercontent.com/5582138/106993107-5788e000-67bd-11eb-906e-be5e6cc114e0.png">
 
 오토스케일 변화 확인을 위해 모니터링을 걸어둔다:
+
 ````
-kubectl get deploy reservation -w
+   kubectl get deploy ticketing -w
 ````
+<img src="https://user-images.githubusercontent.com/5582138/106993252-a8003d80-67bd-11eb-9a6c-28b869fbc9a0.png">
 
 # 9. Zero-downtime deploy (Readiness Probe)
 
@@ -257,12 +264,13 @@ kubectl get deploy reservation -w
 <img src="https://user-images.githubusercontent.com/5582138/106988921-48e9fb00-67b4-11eb-8fdd-2836e443e294.png"  width="250" height="100">
 
 - config map 생성 후 조회
+
 ```
 kubectl create configmap apiurl --from-literal=url=http://localhost:8080
 kubectl get configmap apiurl -o yaml
 ```
-<img src="https://user-images.githubusercontent.com/5582138/106989375-64093a80-67b5-11eb-84df-05325429e556.png" width="500" heignt="400">
 
+<img src="https://user-images.githubusercontent.com/5582138/106989375-64093a80-67b5-11eb-84df-05325429e556.png" width="500" heignt="400">
 
 
 # 11. Polyglot Persistence
