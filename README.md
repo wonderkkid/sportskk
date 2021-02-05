@@ -69,6 +69,7 @@
 ![image](https://user-images.githubusercontent.com/5582138/106929039-3a212b00-6757-11eb-9c17-e80bbe3d1e9b.png)
 
 * Saga pattern
+
 ![image](https://user-images.githubusercontent.com/5582138/106970785-f814db00-6790-11eb-8f39-817bca3dcace.png)
 
 
