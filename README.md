@@ -206,6 +206,10 @@ kubectl expose deploy gateway --type=LoadBalancer --port=8080 -n sportskk
 
 ticketing, ticketcenter, tickettotal 에도 반복 적용
 
+****** 모니터링
+<img src="https://user-images.githubusercontent.com/5582138/106987061-058d8d80-67b0-11eb-8887-da44a1e78989.png"  width="400" height="200">
+
+
 # 7. Circuit Breaker
 
 # 8. Autoscale(HPA)
