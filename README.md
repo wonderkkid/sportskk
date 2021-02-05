@@ -104,6 +104,52 @@ gateway > application.yml
 <img src="https://user-images.githubusercontent.com/5582138/106968918-2a243e00-678d-11eb-8e4a-b91a31959ceb.png"  width="600" height="400">
 
 
+
+
+# 6. Deploy
+
+****** 네임스페이스 만들기
+kubectl create ns sportskk
+kubectl get ns
+kubectl create ns kubectl get sportskk
+
+****** 폴더 만들기, 해당폴더로 이동
+mkdir sportskk
+cd sportskk
+mkdir sportskk
+
+******소스 가져오기
+git clone https://github.com/wonderkkid/sportskk.git
+
+캡처1 git clone
+
+****** 빌드하기
+cd ticketing
+mvn package -Dmaven.test.skip=true
+
+캡처2 mvn package
+
+****** 도커라이징: Azure 레지스트리에 도커 이미지 푸시하기
+
+az acr build --registry skccuser12 --image skccuser12.azurecr.io/gateway:0.1 .
+
+캡처3 az acr build
+
+****** 컨테이너라이징: 디플로이 생성 확인
+kubectl create deploy gateway --image=skccuser12.azurecr.io/gateway:0.1  -n sportskk
+
+캡처7 create deploy
+
+****** 컨테이너라이징: 서비스 생성 확인
+kubectl expose deploy gateway --type=LoadBalancer --port=8080 -n sportskk
+
+캡처8 expose
+
+
+ticketing, ticketcenter, tickettotal 에도 반복 적용
+
+
+
 # 11. Polyglot Persistence
 
 마이크로서비스는 각자의 DB를 가지고 있고, 다른 서비스의 DB 에 접근할 수 없음. 제공된 API 를 통해서만 접근이 가능함. 
