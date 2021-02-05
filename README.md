@@ -212,6 +212,29 @@ ticketing, ticketcenter, tickettotal 에도 반복 적용
 
 # 8. Autoscale(HPA)
 
+ticketing 시스템에 대한 replica 를 동적으로 늘려주도록 HPA 를 설정한다. 설정은 CPU 사용량이 15프로를 넘어서면 replica 를 10개까지 늘려준다:
+
+reservation > deployment.yml 설정
+
+<img src="https://user-images.githubusercontent.com/5582138/106990526-c3684a00-67b7-11eb-990f-c37136ad657a.png"  width="400" height="200">
+
+```` 
+  kubectl autoscale deploy reservation --min=1 --max=10 --cpu-percent=15 
+````
+
+워크로드를 50초 걸어준다.
+
+````
+kubectl exec -it pod/siege-5c7c46b788-4rn4r -c siege -- /bin/bash
+````
+	
+siege -c250 -t50S -r1000 -v --content-type "application/json" 'http://localhost:8080/ticketings POST { "teamcode":KT, "betcredit":1000}'
+
+
+오토스케일 변화 확인을 위해 모니터링을 걸어둔다:
+````
+kubectl get deploy reservation -w
+````
 
 # 9. Zero-downtime deploy (Readiness Probe)
 
