@@ -121,6 +121,17 @@ image
 CQRS - view를 통해 티켓의 구매와 상태 변화, 집계 여부를 한번에 확인 가능함
 
 
+
+# 4. Req/Resp
+
+설계에서 Req/Resp 호출 모델링
+
+Req/Res : 고객 티켓 구매 > 시스템에 집계됨
+          고객 티켓 취소 > 시스템이 집계됨
+          
+호출 프로토콜은 앞서 작성한 REST Repository 에 의해 노출되어있는 REST 서비스를 FeignClient 를 이용하여 호출하도록 구현함
+
+
 # 5. Gateway
 
 gateway > application.yml
@@ -195,7 +206,13 @@ kubectl expose deploy gateway --type=LoadBalancer --port=8080 -n sportskk
 
 ticketing, ticketcenter, tickettotal 에도 반복 적용
 
+# 7. Circuit Breaker
 
+# 8. Autoscale(HPA)
+
+# 9. Zero-downtime deploy (Readiness Probe)
+
+# 10. Config Map/ Persistence Volume
 
 # 11. Polyglot Persistence
 
@@ -215,3 +232,4 @@ ticketing, ticketcenter, tickettotal 에도 반복 적용
 <img src="https://user-images.githubusercontent.com/5582138/106962930-2be90400-6783-11eb-8d79-2897f6c38a39.png"  width="400" height="200">
 
 
+#12. Self-healing (Liveness Probe)
