@@ -212,7 +212,10 @@ ticketing, ticketcenter, tickettotal 에도 반복 적용
 
 # 8. Autoscale(HPA)
 
-~~# 9. Zero-downtime deploy (Readiness Probe)
+
+# 9. Zero-downtime deploy (Readiness Probe)
+
+
 
 # 10. Config Map/ Persistence Volume
 
@@ -257,4 +260,4 @@ kubectl get configmap apiurl -o yaml
 <img src="https://user-images.githubusercontent.com/5582138/106962930-2be90400-6783-11eb-8d79-2897f6c38a39.png"  width="400" height="200">
 
 
-~~#12. Self-healing (Liveness Probe)
+#12. Self-healing (Liveness Probe)
