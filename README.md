@@ -222,22 +222,22 @@ ticketing, ticketcenter, tickettotal 에도 반복 적용
 
 * default쪽
 
-<img src="https://user-images.githubusercontent.com/5582138/106987614-3621f700-67b1-11eb-8e5e-504f3652e913.png"  width="400" height="200">
+<img src="https://user-images.githubusercontent.com/5582138/106988142-543c2700-67b2-11eb-8237-a742af97461d.png"  width="400" height="200">
 
 * docker 쪽
 
-<img src="https://user-images.githubusercontent.com/5582138/106987632-4043f580-67b1-11eb-8b1e-7950b7e4dd0d.png"  width="400" height="200">
+<img src="https://user-images.githubusercontent.com/5582138/106988318-df1d2180-67b2-11eb-9bf8-be7871a9224f.png"  width="400" height="200">
 
 - Deployment.yml 설정
 
-<img src="https://user-images.githubusercontent.com/5582138/106987661-4f2aa800-67b1-11eb-96ec-01ce0ef6eb0c.png"  width="400" height="200">
+<img src="https://user-images.githubusercontent.com/5582138/106988921-48e9fb00-67b4-11eb-8fdd-2836e443e294.png"  width="400" height="200">
 
 - config map 생성 후 조회
 ```
 kubectl create configmap apiurl --from-literal=url=http://localhost:8080
 kubectl get configmap apiurl -o yaml
 ```
-
+<img src="https://user-images.githubusercontent.com/5582138/106989375-64093a80-67b5-11eb-84df-05325429e556.png" width="400" heignt="200">
 
 
 
