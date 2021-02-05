@@ -241,7 +241,7 @@ reservation > deployment.yml 설정
 ````
    kubectl get deploy ticketing -w
 ````
-<img src="https://user-images.githubusercontent.com/5582138/106993252-a8003d80-67bd-11eb-9a6c-28b869fbc9a0.png">
+<img src="https://user-images.githubusercontent.com/5582138/106998429-d97e0680-67c7-11eb-8add-00a40398a4de.png">
 
 # 9. Zero-downtime deploy (Readiness Probe)
 
