@@ -208,11 +208,24 @@ ticketing, ticketcenter, tickettotal 에도 반복 적용
 
 CirCuit Breaker Framework : Spring FeignClient + Hystrix 사용
 Reservation -> Payment 와의 Req/Res 연결에서 요청이 과도한 경우 CirCuit Breaker 통한 격리
-Hystrix 설정: 요청처리 쓰레드에서 처리시간이 600 밀리가 초과할 경우 CirCuit Breaker Closing 설정
+Hystrix 설정: 요청처리 쓰레드에서 처리시간이 100 밀리가 초과할 경우 CirCuit Breaker Closing 설정
 
+````
+// Reservation 서비스 > application.yml 
 
+  feign:
+    hystrix:
+      enabled: true
+
+  hystrix:
+    command:
+      default:
+        execution.isolation.thread.timeoutInMilliseconds: 100
+````
 
 <img src="https://user-images.githubusercontent.com/5582138/107007349-be19f800-67d5-11eb-8784-347c5b549252.png"  width="400" height="200">
+
+
 
 
 # 8. Autoscale(HPA)
