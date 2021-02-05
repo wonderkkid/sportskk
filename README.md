@@ -291,4 +291,4 @@ kubectl get configmap apiurl -o yaml
 <img src="https://user-images.githubusercontent.com/5582138/106962930-2be90400-6783-11eb-8d79-2897f6c38a39.png"  width="400" height="200">
 
 
-#12. Self-healing (Liveness Probe)
+# 12. Self-healing (Liveness Probe)
