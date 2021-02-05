@@ -218,6 +218,29 @@ ticketing, ticketcenter, tickettotal 에도 반복 적용
 
 # 10. Config Map/ Persistence Volume
 
+- application.yml 설정
+
+* default쪽
+
+![image](./img/config1.png)
+
+* docker 쪽
+
+![image](./img/config2.png)
+
+- Deployment.yml 설정
+
+![image](./img/config3.png)
+
+- config map 생성 후 조회
+```
+kubectl create configmap apiurl --from-literal=url=http://payment:8080
+kubectl get configmap apiurl -o yaml
+```
+
+
+
+
 # 11. Polyglot Persistence
 
 마이크로서비스는 각자의 DB를 가지고 있고, 다른 서비스의 DB 에 접근할 수 없음. 제공된 API 를 통해서만 접근이 가능함. 
