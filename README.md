@@ -68,6 +68,10 @@
 
 ![image](https://user-images.githubusercontent.com/5582138/106929039-3a212b00-6757-11eb-9c17-e80bbe3d1e9b.png)
 
+* Saga pattern
+![image](https://user-images.githubusercontent.com/5582138/106970785-f814db00-6790-11eb-8f39-817bca3dcace.png)
+
+
 # 이벤트 도출
 ![image](https://user-images.githubusercontent.com/5582138/106930631-1ced5c00-6759-11eb-8a2e-928fbe706c03.png)
 
